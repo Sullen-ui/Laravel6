@@ -1,0 +1,380 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "Записаться на прием в Клинику Санитас");
+$APPLICATION->SetPageProperty("description", "Выбирайте удобное время и записывайтесь. Клиника Санитас в Новосибирске, Академгородке и Искитиме");
+$APPLICATION->SetTitle("Форма обратной связи");
+?>
+
+<form action="/post" method="post">
+    <div class="row">
+            <div class="col-md-12">
+            <h2>Оценка работы Медицинского центра</h2>
+            
+            </div>
+         
+          <div class="col-md-9">
+                <p>Оцените, насколько Вы удовлетворены взаимодействием с Клиникой Санитас</p>
+            
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="MedCenterStar-3" name="MedCenterStar" value="3">
+        	<label for="MedCenterStar-3" title="Отлично"></label>  
+        	<input type="radio" id="MedCenterStar-2" name="MedCenterStar" value="2">
+	        <label for="MedCenterStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="MedCenterStar-1" name="MedCenterStar" value="1">
+	        <label for="MedCenterStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+             <p class="center">Оцените, пожалуйста, работу клиники по следующим параметрам</p> 
+          </div>
+        
+      
+
+          <div class="col-md-9">
+              
+              <p>удобство расположения клиники</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="LocationStar-3" name="LocationStar" value="3">
+        	<label for="LocationStar-3" title="Отлично"></label>  
+        	<input type="radio" id="LocationStar-2" name="LocationStar" value="2">
+	        <label for="LocationStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="LocationStar-1" name="LocationStar" value="1">
+	        <label for="LocationStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              
+              <p>удобство инфраструктуры вокруг клиники (указатели, вывески, наличие парковки)</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="infrastructureStar-3" name="infrastructureStar" value="3">
+        	<label for="infrastructureStar-3" title="Отлично"></label>  
+        	<input type="radio" id="infrastructureStar-2" name="infrastructureStar" value="2">
+	        <label for="infrastructureStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="infrastructureStar-1" name="infrastructureStar" value="1">
+	        <label for="infrastructureStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         <div class="col-md-9">
+              
+              <p>качество предоставляемых медицинских услуг</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="qualityMedServStar-3" name="qualityMedServStar" value="3">
+        	<label for="qualityMedServStar-3" title="Отлично"></label>  
+        	<input type="radio" id="qualityMedServStar-2" name="qualityMedServStar" value="2">
+	        <label for="qualityMedServStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="qualityMedServStar-1" name="qualityMedServStar" value="1">
+	        <label for="qualityMedServStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         <div class="col-md-9">
+              
+              <p>чистота и освещенность в помещении медицинского центра</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="cleanStar-3" name="cleanStar" value="3">
+        	<label for="cleanStar-3" title="Отлично"></label>  
+        	<input type="radio" id="cleanStar-2" name="cleanStar" value="2">
+	        <label for="cleanStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="cleanStar-1" name="cleanStar" value="1">
+	        <label for="cleanStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+      
+          <div class="col-md-9">
+              
+              <p>удобство ожидания приема (доступность гардероба, обустройство мест для ожидания)</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="waitReceptStar-3" name="waitReceptStar" value="3">
+        	<label for="waitReceptStar-3" title="Отлично"></label>  
+        	<input type="radio" id="waitReceptStar-2" name="waitReceptStar" value="2">
+	        <label for="waitReceptStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="waitReceptStar-1" name="waitReceptStar" value="1">
+	        <label for="waitReceptStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         <div class="col-md-9">
+              
+              <p>Что, по вашему мнению, нам следует улучшить в работе медицинского центра</p>
+          </div> 
+          <div class="col-md-3">
+         <input type="text" id="comment1" name="comment1" placeholder="Ваш комментарий">
+         </div>
+         
+             <div class="col-md-12">
+                 <h2>Оценка сотрудников и врачей медицинского центра</h2>
+             </div>
+          
+          
+          <div class="col-md-12">
+              <p>Прием врача</p>
+          </div> 
+          
+            <div class="col-md-9">
+              <p>Насколько вы остались удовлетворены работой врача</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="SatisfiedStar-3" name="SatisfiedStar" value="3">
+        	<label for="SatisfiedStar-3" title="Отлично"></label>  
+        	<input type="radio" id="SatisfiedStar-2" name="SatisfiedStar" value="2">
+	        <label for="SatisfiedStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="SatisfiedStar-1" name="SatisfiedStar" value="1">
+	        <label for="SatisfiedStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+      
+      
+        <p class="col-md-12">Оцените, пожалуйста, работу врача по следующим параметрам</p>
+        
+        
+       <div class="col-md-9">
+              <p>манера общения (вежливость, доброжелательность, внимательность)</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="mannerDoctorStar-3" name="mannerDoctorStar" value="3">
+        	<label for="mannerDoctorStar-3" title="Отлично"></label>  
+        	<input type="radio" id="mannerDoctorStar-2" name="mannerDoctorStar" value="2">
+	        <label for="mannerDoctorStarr-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="mannerDoctorStar-1" name="mannerDoctorStar" value="1">
+	        <label for="mannerDoctorStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         <div class="col-md-9">
+              <p>полнота предоставленной информации о состоянии здоровья и ходе лечения</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="completenessDoctorStar-3" name="completenessDoctorStar" value="3">
+        	<label for="completenessDoctorStar-3" title="Отлично"></label>  
+        	<input type="radio" id="completenessDoctorStar-2" name="completenessDoctorStar" value="2">
+	        <label for="completenessDoctorStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="completenessDoctorStar-1" name="completenessDoctorStar" value="1">
+	        <label for="completenessDoctorStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              <p>полнота предоставленной информации о возможных вариантах лечения,
+                  целях медицинских манипуляций и необходимости консультации со специалистами другого профиля</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="completenessMedDoctorStar-3" name="completenessMedDoctorStar" value="3">
+        	<label for="completenessMedDoctorStar-3" title="Отлично"></label>  
+        	<input type="radio" id="completenessMedDoctorStar-2" name="completenessMedDoctorStar" value="2">
+	        <label for="completenessMedDoctorStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="completenessMedDoctorStar-1" name="completenessMedDoctorStar" value="1">
+	        <label for="completenessMedDoctorStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         <div class="col-md-9">
+              <p>длительность ожидания приема</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="waitReceptDoctor-3" name="waitReceptDoctor" value="3">
+        	<label for="waitReceptDoctor-3" title="Отлично"></label>  
+        	<input type="radio" id="waitReceptDoctor-2" name="waitReceptDoctor" value="2">
+	        <label for="waitReceptDoctor-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="waitReceptDoctor-1" name="waitReceptDoctor" value="1">
+	        <label for="waitReceptDoctor-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+           <div class="col-md-9">
+              
+              <p>Ваши пожелания по улучшению работы или замечания</p>
+          </div> 
+          <div class="col-md-3">
+         <input type="text" id="comment2" name="comment2" placeholder="Ваш комментарий">
+         </div>
+        
+        <h2>Администратор регистратуры</h2>
+          <div class="col-md-9">
+              <p>Насколько Вы довольны работой администратора регистратуры?</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="AdminRegStar-3" name="AdminRegStar" value="3">
+        	<label for="MedCenterStar-3" title="Отлично"></label>  
+        	<input type="radio" id="AdminRegStar-2" name="AdminRegStar" value="2">
+	        <label for="AdminRegStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="AdminRegStar-1" name="AdminRegStar" value="1">
+	        <label for="AdminRegStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+      
+        <p class="col-md-12">Оцените, пожалуйста, работу администратора по следующим параметрам</p>
+         
+          <div class="col-md-9">
+              <p>манера общения (вежливость, доброжелательность, внимательность)</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="mannerAdminStar-3" name="mannerAdminStar" value="3">
+        	<label for="mannerAdminStar-3" title="Отлично"></label>  
+        	<input type="radio" id="mannerAdminStar-2" name="mannerAdminStar" value="2">
+	        <label for="mannerAdminStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="mannerAdminStar-1" name="mannerAdminStar" value="1">
+	        <label for="mannerAdminStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+             
+         
+          <div class="col-md-9">
+              <p>полнота предоставляемой информации</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="completenessAdminStar-3" name="completenessAdminStar" value="3">
+        	<label for="completenessAdminStar-3" title="Отлично"></label>  
+        	<input type="radio" id="completenessAdminStar-2" name="completenessAdminStar" value="2">
+	        <label for="completenessAdminStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="completenessAdminStar-1" name="completenessAdminStar" value="1">
+	        <label for="completenessAdminStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              <p>внешний вид (опрятность, аккуратность, наличие бейджа)</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="neatnessAdminStar-3" name="neatnessAdminStar" value="3">
+        	<label for="neatnessAdminStar-3" title="Отлично"></label>  
+        	<input type="radio" id="neatnessAdminStar-2" name="neatnessAdminStar" value="2">
+	        <label for="neatnessAdminStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="neatnessAdminStar-1" name="neatnessAdminStar" value="1">
+	        <label for="neatnessAdminStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              <p>скорость обслуживания (или длительность ожидания в очереди)</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<input type="radio" id="speedAdminStar-3" name="speedAdminStar" value="3">
+        	<label for="speedAdminStar-3" title="Отлично"></label>  
+        	<input type="radio" id="speedAdminStar-2" name="speedAdminStar" value="2">
+	        <label for="speedAdminStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="speedAdminStar-1" name="speedAdminStar" value="1">
+	        <label for="speedAdminStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              
+              <p>Ваши пожелания по улучшению работы или замечания</p>
+          </div> 
+          <div class="col-md-3">
+         <input type="text" id="comment3" name="comment3" placeholder="Ваш комментарий">
+         </div>
+         
+          <h2>Оценка работы Колл-центра</h2>
+          <div class="col-md-9">
+              <p>Звонили ли Вы на «горячую линию»/«колл-центр»?</p>
+          </div> 
+          <div class="col-md-3">
+         <div class="rating-area">
+        	<select id="didYouCall" name="didYouCall" class="form-control">
+                <option selected>Да</option>
+                <option>Нет</option>
+            </select>
+	        </div>
+         </div>
+      
+        <p class="col-md-12">Оцените, пожалуйста, работу колл-центра по следующим параметрам</p>
+      
+
+          <div class="col-md-9">
+              
+              <p> время ожидания ответа специалиста</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="waitingResponseStar-3" name="waitingResponseStar" value="3">
+        	<label for="waitingResponseStar-3" title="Отлично"></label>  
+        	<input type="radio" id="LocationStar-2" name="waitingResponseStar" value="2">
+	        <label for="waitingResponseStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="LocationStar-1" name="waitingResponseStar" value="1">
+	        <label for="waitingResponseStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              
+              <p>манера общения (вежливость, доброжелательность)</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="mannerCallStar-3" name="mannerCallStar" value="3">
+        	<label for="mannerCallStar-3" title="Отлично"></label>  
+        	<input type="radio" id="mannerCallStar-2" name="mannerCallStar" value="2">
+	        <label for="mannerCallStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="mannerCallStar-1" name="mannerCallStar" value="1">
+	        <label for="mannerCallStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              
+              <p>полнота предоставляемой информации</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="completenessCallStar-3" name="completenessCallStar3" value="3">
+        	<label for="completenessCallStar-3" title="Отлично"></label>  
+        	<input type="radio" id="completenessCallStar-2" name="completenessCallStar2" value="2">
+	        <label for="completenessCallStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="completenessCallStar-1" name="completenessCallStar1" value="1">
+	        <label for="completenessCallStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+         
+           <div class="col-md-9">
+              <p>Скорость обслуживания</p>
+          </div> 
+          <div class="col-md-3">
+             <div class="rating-area">
+        	<input type="radio" id="speedCallStar-3" name="speedCallStar3" value="3">
+        	<label for="speedCallStar-3" title="Отлично"></label>  
+        	<input type="radio" id="speedCallStar-2" name="speedCallStar2" value="2">
+	        <label for="speedCallStar-2" title="Хорошо, есть замечания"></label>    
+	        <input type="radio" id="speedCallStar-1" name="speedCallStar1" value="1">
+	        <label for="speedCallStar-1" title="Плохо"></label>
+	        </div>
+         </div>
+         
+          <div class="col-md-9">
+              
+              <p>Ваши пожелания по улучшению работы или замечания</p>
+          </div> 
+          <div class="col-md-3">
+         <input type="text" id="comment4" name="comment4" placeholder="Ваш комментарий">
+         </div>
+         
+    </div>
+</form>    
+ <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
